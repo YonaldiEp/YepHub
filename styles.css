@@ -1,46 +1,111 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-header {
-    text-align: center;
-    padding: 50px;
-    background-color: #4CAF50;
-    color: white;
+body {
+    background: #1a1a1a;
+    color: #e0f7da;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    background-color: #333;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
+.logo {
+    font-size: 25px;
+    color: #e0f7da;
     text-decoration: none;
-    padding: 14px 20px;
+    font-weight: 600;
 }
 
-nav ul li a:hover {
-    background-color: #111;
+.navbar a {
+    font-size: 18px;
+    color: #e0f7da;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .3s;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
+.navbar a:hover, .navbar a.active {
+    color: #66bb6a;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-content .text-content {
+    max-width: 1000px;
+    flex: 1 1 300px;
+}
+
+.home-content img {
+    max-width: 300px;
+    margin-right: 20px;
+    flex: 1 1 200px;
+}
+
+.home-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.home-content h3 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #66bb6a;
+}
+
+.home-content p {
+    font-size: 1em;
+}
+
+.vertical-oval-image {
+    width: 200px;
+    height: 600px;
+    border-radius: 50% / 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content img {
+        margin: 20px 0;
+    }
 }
 
 footer {
-    text-align: center;
+    background-color: transparent;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
